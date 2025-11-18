@@ -49,8 +49,8 @@ func (c *TodoController) handleAddTodo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	writeJson(w, todoItem)
 	w.WriteHeader(http.StatusCreated)
+	writeJson(w, todoItem)
 }
 
 func (c *TodoController) handleGetAllTodos(w http.ResponseWriter, r *http.Request) {
